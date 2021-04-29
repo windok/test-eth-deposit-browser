@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: ./Dockerfile
+      args:
+        - WORK_DIR=${WORK_DIR}
+    ports:
+      - ${BACKEND_PORT}:3000
+    volumes:
+      - './backend/src:${WORK_DIR}/src'
+      - './backend/tsconfig.json:${WORK_DIR}/tsconfig.json'
+      - './backend/tsconfig.build.json:${WORK_DIR}/tsconfig.build.json'
+      - './backend/.eslintrc.js:${WORK_DIR}/.eslintrc.js'
+      - './backend/.eslintignore:${WORK_DIR}/.eslintignore'
+      - './backend/.prettierrc:${WORK_DIR}/.prettierrc'
+      - './backend/nest-cli.json:${WORK_DIR}/nest-cli.json'
+    entrypoint: ["npm", "run", "start:dev"]
