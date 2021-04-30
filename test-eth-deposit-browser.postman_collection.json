@@ -1,10 +1,31 @@
 {
 	"info": {
-		"_postman_id": "767fee94-55a9-4407-9591-5b3ada40876c",
+		"_postman_id": "1089c459-bec9-48d1-a1fb-1133ee45bf2d",
 		"name": "test-eth-deposit-browser",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
+		{
+			"name": "Get watching addresses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:3010/address",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3010",
+					"path": [
+						"address"
+					]
+				}
+			},
+			"response": []
+		},
 		{
 			"name": "First address start watching",
 			"request": {

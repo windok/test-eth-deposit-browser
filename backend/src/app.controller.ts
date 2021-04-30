@@ -6,6 +6,11 @@ import { AddressDto } from './dto/address.dto';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
+  @Get('address')
+  async getWatchingAddresses() {
+    return this.appService.getWatchingAddresses();
+  }
+
   @Put('address')
   @HttpCode(HttpStatus.NO_CONTENT)
   async addAddressToWatch(@Body() payload: AddressDto) {

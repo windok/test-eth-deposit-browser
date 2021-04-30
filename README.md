@@ -26,8 +26,10 @@ cp .env.sample .env
 docker compose up
 ```
 
+By default application will be bound to 3010 port on docker host machine.
+
 Set up Postman collection for invoking API
-- use link https://www.getpostman.com/collections/794be39e633c9df105b5
+- use link https://www.getpostman.com/collections/b3557b7d93bbd5dfd6b2
 - or import manually with `test-eth-deposit-browser.postman_collection.json` file in project root
 
 Edit Postman collection and set your own ETH wallet addresses for variables `ethFirstAddress` and `ethSecondAddress`.
@@ -35,6 +37,18 @@ Edit Postman collection and set your own ETH wallet addresses for variables `eth
 Make sure that addresses of your wallets exist in test network of Ethereum provided in config file (`WEB3_WS_PROVIDER` and `WEB3_HTTP_PROVIDER`)
 
 # API reference #
+
+## GET /address ##
+Get watching addresses
+
+Response is array of watching addresses 
+
+Response example:
+```json
+[
+    "0x5110354A3E15C7B97f4FF67F3615575fB4daF878"
+]
+```
 
 ## PUT /address ##
 Start watching address

@@ -17,6 +17,10 @@ export class AppService {
     @Inject('WEB3_UTILS') private readonly web3Utils: Utils,
   ) {}
 
+  async getWatchingAddresses() {
+    return this.addressService.getAddresses();
+  }
+
   async startWatchingAddress(address: string): Promise<void> {
     await this.addressService.addAddress(address);
 
