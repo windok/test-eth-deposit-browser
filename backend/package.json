@@ -9,7 +9,7 @@
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
-    "start:dev": "concurrently --handle-input \"wait-on dist/main.js && nodemon --exec 'npm run lint; npm run start'\" \"nest build -w\"",
+    "start:dev": "concurrently --handle-input \"wait-on dist/main.js && nodemon -V -w 'dist/**/*.js' -e js --exec 'npm run lint; npm run start'\" \"nest build -w\"",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\"",
@@ -24,6 +24,7 @@
     "@nestjs/config": "^0.6.3",
     "@nestjs/core": "7.6.15",
     "@nestjs/platform-express": "7.6.15",
+    "bn.js": "5.2.0",
     "class-validator": "0.13.1",
     "reflect-metadata": "0.1.13",
     "rimraf": "3.0.2",
@@ -71,11 +72,5 @@
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
-  },
-  "nodemonConfig": {
-    "verbose": true,
-    "watch": [
-      "dist/**/*.js"
-    ]
   }
 }

@@ -24,6 +24,8 @@ module.exports = {
     '@typescript-eslint/interface-name-prefix': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
-    'prettier/prettier': 2
+    'prettier/prettier': 2,
+    'arrow-parens': ['warn', 'as-needed'],
+    'max-len': ['warn', 100, { 'ignoreComments': true }]
   },
 };
