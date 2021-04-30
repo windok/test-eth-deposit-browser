@@ -1,0 +1,235 @@
+{
+	"info": {
+		"_postman_id": "767fee94-55a9-4407-9591-5b3ada40876c",
+		"name": "test-eth-deposit-browser",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "First address start watching",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"address\": \"{{ethFirstAddress}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3010/address",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3010",
+					"path": [
+						"address"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "First address stop watching",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:3010/address/{{ethFirstAddress}}",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3010",
+					"path": [
+						"address",
+						"{{ethFirstAddress}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "First address get balance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:3010/address/{{ethFirstAddress}}/balance",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3010",
+					"path": [
+						"address",
+						"{{ethFirstAddress}}",
+						"balance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "First address get transactions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:3010/address/{{ethFirstAddress}}/transaction",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3010",
+					"path": [
+						"address",
+						"{{ethFirstAddress}}",
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Second address start watching",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"address\": \"{{ethSecondAddress}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3010/address",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3010",
+					"path": [
+						"address"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Second address stop watching",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:3010/address/{{ethSecondAddress}}",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3010",
+					"path": [
+						"address",
+						"{{ethSecondAddress}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Second address get balance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:3010/address/{{ethSecondAddress}}/balance",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3010",
+					"path": [
+						"address",
+						"{{ethSecondAddress}}",
+						"balance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Second address get transactions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:3010/address/{{ethSecondAddress}}/transaction",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3010",
+					"path": [
+						"address",
+						"{{ethSecondAddress}}",
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "ethFirstAddress",
+			"value": "0x5110354A3E15C7B97f4FF67F3615575fB4daF878"
+		},
+		{
+			"key": "ethSecondAddress",
+			"value": "0x559d3A96cA554C75c51f24F83DE8c73c4B3e6089"
+		}
+	]
+}
