@@ -8,7 +8,7 @@ Service provides API for:
 3) Get transactions by address
 4) Get total amount of ETH transferred(registered by system) to a specific address
 
-Storing transaction and addresses in persistent database is not implemented yet.
+Storing transaction and addresses in persistent storage is not implemented yet.
 
 # Setup #
 
@@ -66,7 +66,7 @@ Request example:
 DELETE /address/0x5110354A3E15C7B97f4FF67F3615575fB4daF878/balance
 ```
 
-In response it is possible to see address balance based on transactions that occurred after service start launch.
+In response it is possible to see address balance based on transactions that occurred after service launch.
 Also overall balance of the address is present.
  
 Response example:
